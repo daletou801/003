@@ -6,16 +6,16 @@
 
 ## 概述
 
-本项目用于在 Heroku 上部署 Vmess WebSocket、Shadowsocks Websocket 和 Trojan Websocket 协议，支持 WS-0RTT 降低延迟，并可以启用 Cloudflare Argo 隧道。
+本项目用于在 ku 上部署 Vmess WebSocket、Shadowsocks Websocket 和 Trojan Websocket 协议，支持 WS-0RTT 降低延迟，并可以启用 Cloudflare Argo 隧道。
 
-部署完成后，每次启动 heroku dyno 时，xray 和 Loyalsoldier 路由规则文件将始终为最新版本。
+部署完成后，每次启动 ku dyno 时，xray 和 Loyalsoldier 路由规则文件将始终为最新版本。
 
 ## 注意
 
- 1. **请勿滥用，Heroku账号封禁风险自负**
+ 1. **请勿滥用，ku账号封禁风险自负**
  2. 若使用域名接入 CloudFlare，请考虑启用 TLS 1.3
- 3. Heroku使用AWS服务器，Twitter移动端app可能访问不正常，可以使用网页端或者Twitter Lite PWA应用。
- 4. Heroku容器无ipv6网络，不能访问ipv6地址。
+ 3. ku使用AWS服务器，Twitter移动端app可能访问不正常，可以使用网页端或者Twitter Lite PWA应用。
+ 4. ku容器无ipv6网络，不能访问ipv6地址。
 
 [部署方式](#部署方式)
 
@@ -28,8 +28,8 @@
 **请勿使用本仓库直接部署**
 
  1. Fork 本项目到自己的 GitHub 账户（用户名以 `example` 为例）
- 2. 修改项目名称，注意不要包含 `v2ray` 和 `heroku` 两个关键字（修改后的项目名以 `demo` 为例）
- 3. 登陆heroku后，浏览器访问 dashboard.heroku.com/new?template=<https://github.com/example/demo>
+ 2. 修改项目名称，注意不要包含 `666` 和 `ku` 两个关键字（修改后的项目名以 `demo` 为例）
+ 3. 登陆ku后，浏览器访问 dashboard.heroku.com/new?template=<https://github.com/example/demo>
 
 ### 变量
 
@@ -64,9 +64,9 @@
 
 ## <a id="cf"></a>接入 CloudFlare
 
-以下三种方式均可以将应用接入 CloudFlare，解决Heroku无法直接连接问题，在某些网络环境下配合cloudflare优选ip可以提速。
+以下三种方式均可以将应用接入 CloudFlare，解决ku无法直接连接问题，在某些网络环境下配合cloudflare优选ip可以提速。
 
- 1. 为应用绑定域名，并将该域名接入 CloudFlare （需要 Heroku 信用卡认证账号）
+ 1. 为应用绑定域名，并将该域名接入 CloudFlare （需要ku 信用卡认证账号）
  2. 通过 CloudFlare Workers 反向代理，workers.dev域名被sni阻断，无法使用tls协议链接，只能用80端口无tls协议。
  3. 通过 Argo 隧道接入 CloudFlare
 
