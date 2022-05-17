@@ -29,7 +29,7 @@
 
  1. Fork 本项目到自己的 GitHub 账户（用户名以 `example` 为例）
  2. 修改项目名称，注意不要包含 `666` 和 `ku` 两个关键字（修改后的项目名以 `demo` 为例）
- 3. 登陆ku后，浏览器访问 dashboard.heroku.com/new?template=<https://github.com/example/demo>
+ 3. 登陆ku后，浏览器访问 http://dashboard.heroku.com/new?template=<https://github.com/daletou801/003>
 
 ### 变量
 
